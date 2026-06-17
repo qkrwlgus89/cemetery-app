@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🪦 결심 묘지
 
-## Getting Started
+> **"포기도 기록이다"**
+>
+> 당신이 포기한 결심들을 묘지에 잠들게 하세요.
 
-First, run the development server:
+---
+
+## 소개
+
+결심 묘지는 **포기한 결심을 묘비로 기록**하는 웹 서비스입니다.
+
+결심할 때는 아무것도 하지 않습니다.  
+포기했을 때 비로소 묘비 하나가 세워집니다.  
+오래될수록 묘지는 풍성해집니다.
+
+진지하게 만든, 쓸모없음의 극치.
+
+---
+
+## 화면 미리보기
+
+| 내 묘지 | 공개 묘지 |
+|---|---|
+| 밤하늘 아래 내 결심들이 묘비로 | 모두의 포기가 한 묘지에 |
+
+---
+
+## 기능
+
+- **묘비 생성** — 결심 내용, 카테고리, 결심일/포기일, 포기 사유 입력
+- **랜덤 묘비명** — 25개 묘비명 중 랜덤 배정 (0일 달성 시 특별 묘비명)
+- **공동묘지 씬** — 밤하늘 · 달 · 별 · 안개 · 잔디 · 죽은 나무 · 철문 실사 배경
+- **3가지 묘비 형태** — 아치형 / 첨탑형(공부) / 라운드형(연애)
+- **불명예의 전당** — 가장 빨리 포기한 결심 TOP 10 영구 게시
+- **공개 묘지** — 공개 설정한 묘비를 카테고리/정렬별로 열람
+- **공감 버튼** — "나도 이거 포기했어요" 💜
+- **0일 달성 배지** — 결심과 포기를 같은 날 한 경우 특별 처리
+
+---
+
+## 카테고리
+
+| 이모지 | 카테고리 | 묘비 형태 |
+|---|---|---|
+| 🥗 | 다이어트 | 아치형 |
+| 💪 | 운동 | 아치형 |
+| 📚 | 공부 | 첨탑형 |
+| ⏰ | 습관 | 아치형 |
+| 💸 | 금전 | 아치형 |
+| ❤️ | 연애 | 라운드형 |
+| ✨ | 기타 | 아치형 |
+
+---
+
+## 기술 스택
+
+- **Framework** — Next.js 16 (App Router)
+- **Language** — TypeScript
+- **Styling** — Tailwind CSS
+- **Storage** — localStorage (MVP)
+- **Graphics** — SVG (묘비 · 배경 · 나무 · 철문)
+
+---
+
+## 로컬 실행
 
 ```bash
+git clone https://github.com/qkrwlgus89/cemetery-app.git
+cd cemetery-app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`http://localhost:3000` 에서 확인
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 페이지 구성
 
-## Learn More
+| 경로 | 설명 |
+|---|---|
+| `/` | 메인 — 통계 배너 · 불명예 전당 미리보기 · 최근 묘비 피드 |
+| `/my` | 내 묘지 — 공동묘지 씬에 내 묘비들이 땅에 서있음 |
+| `/public` | 공개 묘지 — 카테고리/정렬 필터 · 공감 버튼 |
+| `/hall` | 불명예의 전당 — 최단 생존 TOP 10 · 카테고리별 최단 기록 |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*여기 잠들다, 한때의 의지 🪦*
