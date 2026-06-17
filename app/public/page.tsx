@@ -49,17 +49,17 @@ function Moon() {
 
 function Fog() {
   const wisps = [
-    { w: "65%", top: "15%", dur: "17s", delay: "-2s",  op: 0.06 },
-    { w: "52%", top: "35%", dur: "22s", delay: "-9s",  op: 0.07 },
-    { w: "70%", top: "55%", dur: "13s", delay: "-5s",  op: 0.05 },
-    { w: "45%", top: "70%", dur: "20s", delay: "-13s", op: 0.08 },
+    { w: "52%", top: "30%", dur: "22s", delay: "-2s",  op: 0.018 },
+    { w: "45%", top: "55%", dur: "28s", delay: "-12s", op: 0.022 },
+    { w: "60%", top: "72%", dur: "19s", delay: "-6s",  op: 0.015 },
   ];
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {wisps.map((w, i) => (
-        <div key={i} className="absolute animate-fog rounded-full"
-          style={{ width: w.w, height: 48, top: w.top, background: "white",
-            filter: "blur(28px)", opacity: w.op,
+        <div key={i} className="absolute animate-fog"
+          style={{ width: w.w, height: 28, top: w.top,
+            background: "radial-gradient(ellipse at center, white 0%, transparent 70%)",
+            filter: "blur(16px)", opacity: w.op,
             animationDuration: w.dur, animationDelay: w.delay }} />
       ))}
     </div>

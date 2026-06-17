@@ -80,23 +80,22 @@ function Moon() {
 
 function Fog() {
   const wisps = [
-    { w: "68%", top: "18%", dur: "16s", delay: "0s",   opacity: 0.06 },
-    { w: "55%", top: "38%", dur: "21s", delay: "-8s",  opacity: 0.07 },
-    { w: "72%", top: "58%", dur: "14s", delay: "-4s",  opacity: 0.05 },
-    { w: "48%", top: "72%", dur: "19s", delay: "-11s", opacity: 0.08 },
+    { w: "55%", top: "32%", dur: "22s", delay: "0s",   opacity: 0.018 },
+    { w: "48%", top: "56%", dur: "28s", delay: "-11s", opacity: 0.022 },
+    { w: "62%", top: "72%", dur: "19s", delay: "-6s",  opacity: 0.015 },
   ];
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {wisps.map((w, i) => (
         <div
           key={i}
-          className="absolute animate-fog rounded-full"
+          className="absolute animate-fog"
           style={{
             width:            w.w,
-            height:           48,
+            height:           28,
             top:              w.top,
-            background:       "white",
-            filter:           "blur(28px)",
+            background:       "radial-gradient(ellipse at center, white 0%, transparent 70%)",
+            filter:           "blur(16px)",
             opacity:          w.opacity,
             animationDuration: w.dur,
             animationDelay:   w.delay,
